@@ -21,32 +21,32 @@ namespace mapmover
 
         public MyMapObject(int id, float x, float y, float z, float rx, float ry, float rz)
         {
-            this.ObjectID = id;
-            this.ObjectX = x;
-            this.ObjectY = y;
-            this.ObjectZ = z;
+            ObjectID = id;
+            ObjectX = x;
+            ObjectY = y;
+            ObjectZ = z;
 
-            this.ObjectRotX = rx;
-            this.ObjectRotY = ry;
-            this.ObjectRotZ = rz;
+            ObjectRotX = rx;
+            ObjectRotY = ry;
+            ObjectRotZ = rz;
         }
 
         public void Move(float x, float y, float z)
         {
-            this.ObjectX += x;
-            this.ObjectY += y;
-            this.ObjectZ += z;
+            ObjectX += x;
+            ObjectY += y;
+            ObjectZ += z;
         }
 
         public void SetWorldData(int interior, int vw)
         {
-            this.InteriorID = interior;
-            this.VirtualWorld = vw;
+            InteriorID = interior;
+            VirtualWorld = vw;
         }
 
         public void SetStreamDist(float s)
         {
-            this.StreamDistance = s;
+            StreamDistance = s;
         }
     }
 }
