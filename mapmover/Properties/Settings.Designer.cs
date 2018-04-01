@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace mapmover.Properties
+namespace MapMover.Properties
 {
 
 

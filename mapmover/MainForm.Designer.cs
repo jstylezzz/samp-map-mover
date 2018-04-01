@@ -1,4 +1,4 @@
-﻿namespace mapmover
+﻿namespace MapMover
 {
     partial class ConverterMainPage
     {
@@ -94,7 +94,7 @@
             this.m_clearOriginalButton.TabIndex = 4;
             this.m_clearOriginalButton.Text = "Clear";
             this.m_clearOriginalButton.UseVisualStyleBackColor = true;
-            this.m_clearOriginalButton.Click += new System.EventHandler(this.m_clearOriginalButton_Click);
+            this.m_clearOriginalButton.Click += new System.EventHandler(this.ClearOriginalButtonClicked);
             // 
             // m_clearMovedButton
             // 
@@ -104,7 +104,7 @@
             this.m_clearMovedButton.TabIndex = 5;
             this.m_clearMovedButton.Text = "Clear";
             this.m_clearMovedButton.UseVisualStyleBackColor = true;
-            this.m_clearMovedButton.Click += new System.EventHandler(this.m_clearMovedButton_Click);
+            this.m_clearMovedButton.Click += new System.EventHandler(this.ClearMovedButtonClicked);
             // 
             // m_clearBothButton
             // 
@@ -114,7 +114,7 @@
             this.m_clearBothButton.TabIndex = 6;
             this.m_clearBothButton.Text = "Clear Both";
             this.m_clearBothButton.UseVisualStyleBackColor = true;
-            this.m_clearBothButton.Click += new System.EventHandler(this.m_clearBothButton_Click);
+            this.m_clearBothButton.Click += new System.EventHandler(this.ClearBothClicked);
             // 
             // m_moveObjectsButton
             // 
@@ -124,7 +124,7 @@
             this.m_moveObjectsButton.TabIndex = 7;
             this.m_moveObjectsButton.Text = "Move Map Objects";
             this.m_moveObjectsButton.UseVisualStyleBackColor = true;
-            this.m_moveObjectsButton.Click += new System.EventHandler(this.m_moveObjectsButton_Click);
+            this.m_moveObjectsButton.Click += new System.EventHandler(this.MoveMappingClicked);
             // 
             // m_moveXBox
             // 
@@ -185,7 +185,7 @@
             this.m_copyToClipboard.TabIndex = 14;
             this.m_copyToClipboard.Text = "Copy To Clipboard";
             this.m_copyToClipboard.UseVisualStyleBackColor = true;
-            this.m_copyToClipboard.Click += new System.EventHandler(this.m_copyToClipboard_Click);
+            this.m_copyToClipboard.Click += new System.EventHandler(this.CopyToClipboardClicked);
             // 
             // label6
             // 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 
-namespace mapmover
+namespace MapMover
 {
 	public partial class ConverterMainPage : Form
     {
@@ -12,23 +12,23 @@ namespace mapmover
             InitializeComponent();
         }
 
-        private void m_clearOriginalButton_Click(object sender, EventArgs e)
+        private void ClearOriginalButtonClicked(object sender, EventArgs e)
         {
             m_originalMapBox.Clear();
         }
 
-        private void m_clearMovedButton_Click(object sender, EventArgs e)
+        private void ClearMovedButtonClicked(object sender, EventArgs e)
         {
             m_movedMapBox.Clear();
         }
 
-        private void m_clearBothButton_Click(object sender, EventArgs e)
+        private void ClearBothClicked(object sender, EventArgs e)
         {
             m_movedMapBox.Clear();
             m_originalMapBox.Clear();
         }
 
-        private void m_moveObjectsButton_Click(object sender, EventArgs e)
+        private void MoveMappingClicked(object sender, EventArgs e)
         {
             string[] obs = m_originalMapBox.Text.Split(';');
             List<MyMapObject> objects = new List<MyMapObject>();
@@ -103,7 +103,7 @@ namespace mapmover
 
         }
 
-        private void m_copyToClipboard_Click(object sender, EventArgs e)
+        private void CopyToClipboardClicked(object sender, EventArgs e)
         {
             Clipboard.SetText(m_movedMapBox.Text);
         }

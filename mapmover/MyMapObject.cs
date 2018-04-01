@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace mapmover
+﻿namespace MapMover
 {
-    public class MyMapObject
+	public class MyMapObject
     {
         public int ObjectID { get; private set; }
         public float ObjectX { get; private set; }
