@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConverterMainPage));
 			this.m_originalMapBox = new System.Windows.Forms.RichTextBox();
 			this.m_movedMapBox = new System.Windows.Forms.RichTextBox();
 			this.label1 = new System.Windows.Forms.Label();
@@ -54,6 +55,8 @@
 			this.label11 = new System.Windows.Forms.Label();
 			this.m_drawDistBox = new System.Windows.Forms.TextBox();
 			this.m_convertToDynamic = new System.Windows.Forms.CheckBox();
+			this.m_overrideDrawDist = new System.Windows.Forms.CheckBox();
+			this.m_overrideStreamDist = new System.Windows.Forms.CheckBox();
 			this.SuspendLayout();
 			// 
 			// m_originalMapBox
@@ -280,7 +283,7 @@
 			// 
 			this.label11.AutoSize = true;
 			this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label11.Location = new System.Drawing.Point(625, 175);
+			this.label11.Location = new System.Drawing.Point(625, 172);
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(82, 15);
 			this.label11.TabIndex = 24;
@@ -288,7 +291,7 @@
 			// 
 			// m_drawDistBox
 			// 
-			this.m_drawDistBox.Location = new System.Drawing.Point(628, 191);
+			this.m_drawDistBox.Location = new System.Drawing.Point(628, 188);
 			this.m_drawDistBox.Name = "m_drawDistBox";
 			this.m_drawDistBox.Size = new System.Drawing.Size(100, 20);
 			this.m_drawDistBox.TabIndex = 23;
@@ -297,18 +300,43 @@
 			// m_convertToDynamic
 			// 
 			this.m_convertToDynamic.AutoSize = true;
-			this.m_convertToDynamic.Location = new System.Drawing.Point(522, 345);
+			this.m_convertToDynamic.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.m_convertToDynamic.Location = new System.Drawing.Point(564, 345);
 			this.m_convertToDynamic.Name = "m_convertToDynamic";
-			this.m_convertToDynamic.Size = new System.Drawing.Size(316, 17);
+			this.m_convertToDynamic.Size = new System.Drawing.Size(257, 30);
 			this.m_convertToDynamic.TabIndex = 26;
-			this.m_convertToDynamic.Text = "Convert objects to dynamic (does not work for VC2SAObject).";
+			this.m_convertToDynamic.Text = "Convert non-dynamic objects \r\nto dynamic (does not work for VC2SAObject).";
 			this.m_convertToDynamic.UseVisualStyleBackColor = true;
+			// 
+			// m_overrideDrawDist
+			// 
+			this.m_overrideDrawDist.AutoSize = true;
+			this.m_overrideDrawDist.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.m_overrideDrawDist.Location = new System.Drawing.Point(597, 214);
+			this.m_overrideDrawDist.Name = "m_overrideDrawDist";
+			this.m_overrideDrawDist.Size = new System.Drawing.Size(185, 17);
+			this.m_overrideDrawDist.TabIndex = 27;
+			this.m_overrideDrawDist.Text = "Override original drawdistance";
+			this.m_overrideDrawDist.UseVisualStyleBackColor = true;
+			// 
+			// m_overrideStreamDist
+			// 
+			this.m_overrideStreamDist.AutoSize = true;
+			this.m_overrideStreamDist.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.m_overrideStreamDist.Location = new System.Drawing.Point(564, 381);
+			this.m_overrideStreamDist.Name = "m_overrideStreamDist";
+			this.m_overrideStreamDist.Size = new System.Drawing.Size(196, 17);
+			this.m_overrideStreamDist.TabIndex = 28;
+			this.m_overrideStreamDist.Text = "Override original stream distance";
+			this.m_overrideStreamDist.UseVisualStyleBackColor = true;
 			// 
 			// ConverterMainPage
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1350, 486);
+			this.Controls.Add(this.m_overrideStreamDist);
+			this.Controls.Add(this.m_overrideDrawDist);
 			this.Controls.Add(this.m_convertToDynamic);
 			this.Controls.Add(this.label11);
 			this.Controls.Add(this.m_drawDistBox);
@@ -336,6 +364,7 @@
 			this.Controls.Add(this.m_movedMapBox);
 			this.Controls.Add(this.m_originalMapBox);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "ConverterMainPage";
 			this.Text = "SA-MP Map Mover";
 			this.ResumeLayout(false);
@@ -371,6 +400,8 @@
 		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.TextBox m_drawDistBox;
 		private System.Windows.Forms.CheckBox m_convertToDynamic;
+		private System.Windows.Forms.CheckBox m_overrideDrawDist;
+		private System.Windows.Forms.CheckBox m_overrideStreamDist;
 	}
 }
 

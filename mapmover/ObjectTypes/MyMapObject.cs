@@ -26,6 +26,11 @@
 			DrawDistance = drawDist;
 		}
 
+		public void OverrideDrawDistance(float newDist)
+		{
+			DrawDistance = newDist;
+		}
+
         public virtual void Move(double x, double y, double z)
         {
             ObjectX += x;

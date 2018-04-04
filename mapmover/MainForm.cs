@@ -70,7 +70,7 @@ namespace MapMover
 
 			if(currentObject != null)
 			{
-				currentObject.SetStreamDist(m_streamDist);
+				if(m_overrideStreamDist.Checked) currentObject.OverrideStreamDistance(m_streamDist);
 				currentObject.SetWorldData(m_interior, m_virtualWorld);
 			}
 
@@ -125,6 +125,10 @@ namespace MapMover
 
 				//Perform move operations down here, since this is the same for all objects.
 				currentObject.Move(m_moveX, m_moveY, m_moveZ);
+
+				if(m_overrideDrawDist.Checked)
+					currentObject.OverrideDrawDistance(m_drawDist);
+
 				objects.Add(currentObject);
 			}
 

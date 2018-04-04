@@ -15,8 +15,9 @@ namespace MapMover.ObjectTypes
 		public MyDynamicObject(int id, double x, double y, double z, double rx, double ry, double rz, int vworld, int interior, double streamDist, double drawDist)
 		{
 			InitBase(id, x, y, z, rx, ry, rz, drawDist);
-			SetWorldData(interior, vworld);
-			SetStreamDist(streamDist);
+			InteriorID = interior;
+			VirtualWorld = vworld;
+			StreamDistance = streamDist;
 		}
 
 		public virtual void SetWorldData(int interior, int vw)
@@ -25,7 +26,7 @@ namespace MapMover.ObjectTypes
 			VirtualWorld = vw;
 		}
 
-		public virtual void SetStreamDist(double s)
+		public virtual void OverrideStreamDistance(double s)
 		{
 			StreamDistance = s;
 		}
